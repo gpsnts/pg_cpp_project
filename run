@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Hard-coded 'cause time reasons
+if [ $(ls libs/glfw | wc -l) -eq "0" -a $(ls libs/glm | wc -l) -eq "0" -a $(ls libs/stb | wc -l) -eq "0" ]
+then
+	printf "\n\nAdding submodules \n\n"
+	git submodule init;
+	git submodule update;
+fi
+
+rm -rf build 2> /dev/null;
+cmake -B build -G "Ninja"; 
+ninja -C build;
+cd build;
+./app $1;

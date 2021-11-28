@@ -9,6 +9,15 @@ add_executable(${PROJECT_NAME})
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/Libraries.cmake)
 include_directories(${HEADERS_DIR})
 
+option(DEBUG_MODE "Show logs in debug mode" OFF)
+
+if(DEBUG_MODE)
+	message("Rodando em DEBUG_MODE\n")
+  add_definitions(-DDEBUG_MODE)
+else()
+	message("Rodando em modo sem logs (!DEBUG_MODE)")
+endif()
+
 target_include_directories(
   ${PROJECT_NAME}
 	PRIVATE

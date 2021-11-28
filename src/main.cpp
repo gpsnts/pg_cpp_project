@@ -1,7 +1,10 @@
 #include <iostream>
+#include <vector>
+#include <string>
 
-using namespace std;
+#include "headers/gl_utils.hpp"
 
-int main(int argc, char** argv) {
-	cout << "Hello, pg" << endl;
+int main(int argc, char** argv)
+{
+	GlUtils::debug_print<std::string>("ASD");
 }

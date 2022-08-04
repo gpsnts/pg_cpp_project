@@ -21,7 +21,11 @@ int main(int argc, char** argv)
 		return EXIT_FAILURE;
 	}
 
-  while (!glfwWindowShouldClose(app->get_window()))
+  auto foo = GlUtils::stbi_load_image("/home/messer/Projects/pg_cpp/src/textures/block.png", GL_TRUE);
+
+  GlUtils::debug_print(foo);
+
+  while(!glfwWindowShouldClose(app->get_window()))
 	{
     Application::frames_per_second(app->get_window());
     

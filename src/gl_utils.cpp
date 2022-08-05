@@ -1,5 +1,4 @@
 #include "headers/gl_utils.hpp"
-#include "stb_image.h"
 
 unsigned char* GlUtils::stbi_load_image(std::string const &file_loc, GLboolean alpha)
 {

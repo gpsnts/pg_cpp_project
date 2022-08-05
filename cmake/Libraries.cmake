@@ -38,7 +38,6 @@ add_subdirectory(${LIBS_DIR}/glfw)
 add_subdirectory(${LIBS_DIR}/glm)
 
 # STB
-add_subdirectory(${LIBS_DIR}/stb)
 include_directories(${LIBS_DIR}/stb)
 link_directories(${LIBS_DIR}/stb)
 

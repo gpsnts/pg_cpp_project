@@ -8,7 +8,6 @@
 #include "pch/glfw_pch.hpp"
 
 #include "stb_image.h"
-#include <stb/stb_image.h>
 
 class GlUtils
 {

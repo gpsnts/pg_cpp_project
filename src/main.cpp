@@ -1,13 +1,10 @@
-#include <string>
+#define STB_IMAGE_IMPLEMENTATION
 
 #include "headers/gl_utils.hpp"
 #include "headers/application.hpp"
 
-
 int main(int argc, char** argv)
 {
-	GlUtils::debug_print<std::string>("DEBUG MODE!");
-
   GLint HEIGHT = 768;
 	GLint WIDTH = 1366;
 	const GLchar *APP_NAME = "TEST";
@@ -22,8 +19,6 @@ int main(int argc, char** argv)
 	}
 
   auto foo = GlUtils::stbi_load_image("/home/messer/Projects/pg_cpp/src/textures/block.png", GL_TRUE);
-
-  GlUtils::debug_print(foo);
 
   while(!glfwWindowShouldClose(app->get_window()))
 	{

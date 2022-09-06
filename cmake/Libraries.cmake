@@ -13,12 +13,12 @@ add_library(glad ${LIBS_DIR}/glad/src/glad.c)
 target_include_directories(glad PRIVATE ${LIBS_DIR}/glad/include)
 
 # FreeType2
-set(FREETYPE_DIR ${LIBS_DIR}/freetype)
-set(FREETYPE_LIBRARY freetype)
-set(FREETYPE_LIBRARIES ${FREETYPE_LIBRARY})
-set(FREETYPE_INCLUDE_DIRS ${FREETYPE_DIR}/include)
-include_directories(${FREETYPE_INCLUDE_DIRS})
-link_directories(${FREETYPE_DIR})
+#set(FREETYPE_DIR ${LIBS_DIR}/freetype)
+#set(FREETYPE_LIBRARY freetype)
+#set(FREETYPE_LIBRARIES ${FREETYPE_LIBRARY})
+#set(FREETYPE_INCLUDE_DIRS ${FREETYPE_DIR}/include)
+#include_directories(${FREETYPE_INCLUDE_DIRS})
+#link_directories(${FREETYPE_DIR})
 
 # ASSIMP
 #message("Running assimp \n\n\n\n\n")
@@ -46,7 +46,7 @@ target_link_libraries(
 	glad
 	glfw
 	glm
-	${FREETYPE_LIBRARIES}
+	#	${FREETYPE_LIBRARIES}
 	#assimp
 	${CMAKE_DL_LIBS}
 )
@@ -55,7 +55,7 @@ file(
   GLOB
   LIBS_INCLUDES
   ${LIBS_DIR}/glad/include
-	${FREETYPE_INCLUDE_DIRS}
+	#${FREETYPE_INCLUDE_DIRS}
   ${OpenGL_INCLUDE_DIRS}
 )
 

@@ -4,6 +4,7 @@
 #include "pch/glad_pch.hpp"
 #include "pch/glfw_pch.hpp"
 
+#include <ctime>
 #include <iostream>
 #include <sstream>
 #include <string>

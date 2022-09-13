@@ -52,7 +52,7 @@ void Application::frames_per_second(GLFWwindow *window)
 
 	elapsed = current - previous;
 
-	if (elapsed > 0.25) // 4x p/sec
+	if (elapsed > 1.0f)
 	{
 		previous = current;
 		double
